@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1ºmês/∞ºmês</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap');
+
+        body {
+            font-family: 'Brush Script MT', cursive;
+            background: linear-gradient(135deg, #00BFFF 0%, #87CEFA 25%, #00FFFF 50%, #00FA9A 75%, #98FB98 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        /* Imagens nos cantos */
+        .corner-image {
+            position: fixed;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border: 5px solid #00FF7F;
+            z-index: 10;
+            transition: transform 0.3s ease;
+        }
+
+        .corner-image:hover {
+            transform: scale(1.1);
+        }
+
+        .corner-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .top-left {
+            top: 20px;
+            left: 20px;
+        }
+
+        .top-right {
+            top: 20px;
+            right: 20px;
+        }
+
+        .bottom-left {
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .bottom-right {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* Conteúdo principal */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 200px 50px;
+            text-align: center;
+        }
+
+        /* Seções de texto */
+        .text-section {
+            margin: 40px 0;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            backdrop-filter: blur(10px);
+        }
+
+        .top-text {
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.8), rgba(135, 206, 250, 0.8));
+            margin-bottom: 60px;
+        }
+
+        .bottom-text {
+            background: linear-gradient(135deg, rgba(0, 255, 127, 0.8), rgba(152, 251, 152, 0.8));
+            margin-top: 60px;
+        }
+
+        /* Títulos */
+        h1 {
+            font-size: 4rem;
+            color: #fff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Parágrafos */
+        p {
+            font-size: 1.8rem;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        /* Imagem central */
+        .center-image {
+            width: 500px;
+            height: 350px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border: 8px solid #00FFFF;
+            transition: transform 0.3s ease;
+        }
+
+        .center-image:hover {
+            transform: scale(1.05);
+        }
+
+        .center-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .corner-image {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .main-content {
+                padding: 150px 20px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            p {
+                font-size: 1.3rem;
+            }
+            
+            .center-image {
+                width: 300px;
+                height: 200px;
+            }
+            
+            .text-section {
+                padding: 20px;
+                margin: 20px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .corner-image {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .top-left, .top-right {
+                top: 10px;
+            }
+            
+            .top-left, .bottom-left {
+                left: 10px;
+            }
+            
+            .top-right, .bottom-right {
+                right: 10px;
+            }
+            
+            .bottom-left, .bottom-right {
+                bottom: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            p {
+                font-size: 1.1rem;
+            }
+            
+            .center-image {
+                width: 250px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Imagens fixas nos cantos -->
+        <div class="corner-image top-left">
+            <img src="C:\Users\paulo\OneDrive\Documentos\mes\Imagem4.jpg" alt="Rosas românticas">
+        </div>
+        
+        <div class="corner-image top-right">
+            <img src="C:\Users\paulo\OneDrive\Documentos\mes\Imagem3.jpg" alt="Coração decorativo">
+        </div>
+        
+        <div class="corner-image bottom-left">
+            <img src="C:\Users\paulo\OneDrive\Documentos\mes\Imagem2.jpg"alt="Presente romântico">
+        </div>
+        
+        <div class="corner-image bottom-right">
+            <img src="C:\Users\paulo\OneDrive\Documentos\mes\Imagem1.jpg" alt="Velas românticas">
+        </div>
+
+        <!-- Conteúdo central -->
+        <div class="main-content">
+            <!-- Texto superior -->
+            <div class="text-section top-text">
+                <h1>1 mês dos melhores Namorados</h1>
+                <p>Nós = 2=4=8 = ∞</p>
+                <p>Momentos com você é como se não fossem momentos. Porque eles tendem a durar pra sempre, e passam muito rápido!</p>
+            </div>
+
+            <!-- Imagem central -->
+            <div class="center-image">
+                <img src="C:\Users\paulo\OneDrive\Documentos\mes\Imagem5.jpg" alt="Casal romântico">
+            </div>
+
+            <!-- Texto inferior -->
+            <div class="text-section bottom-text">
+                <h2>Amor Verdadeiro🩵💚</h2>
+                <p>É o título que quero para a nossa relação daqui em diante. Afinal, se passamos um 1 mês tão rápido, uma vida não vai ser díficil.</p>
+                <p>Quero usar disso pra te dizer que, eu realmente lhe amo meu amor, tipo de verdade mesmo. A ponto de fazer loucuras por você.</p>
+                <p>E aqui vai os meus parabéns, por me aguentar e por lutar junto comigo, para que a gente tenha conseguido chegar aqui. Te amo muitão e espero que isso só cresça!💚🩵💚🩵🍕</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
